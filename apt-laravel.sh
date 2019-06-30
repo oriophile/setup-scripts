@@ -1,5 +1,8 @@
 #!/bin/bash
 
+CWD=$(pwd)
+cd $HOME
+
 sudo apt update
 sudo apt install -y git
 git config --global user.name "oriophile"
@@ -19,7 +22,7 @@ sudo apt install -y libapache2-mod-php7.3
 #ctype resides in common extension package (usually gets installed while installing the php package
 sudo apt install -y php7.3-bcmath php7.3-common php7.3-json php7.3-mbstring php7.3-pdo php7.3-xml
 #these exentions are not required explicitly but composer still requires them to install Laravel
-sudo apt install -y php-7.3-zip
+sudo apt install -y php7.3-zip
 #sudo apt autoremove
 
 
@@ -38,3 +41,4 @@ sudo mysql --version
 php -v
 composer --version
 echo "Note : add path '\$HOME/.composer/vendor/bin' to path variable\n"
+cd $CWD
