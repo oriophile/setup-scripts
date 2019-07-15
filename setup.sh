@@ -20,6 +20,6 @@ composer install
 php artisan key:generate
 sudo systemctl restart apache2
 sudo systemctl restart mysql
-mysql -e "create database laravel character set utf8mb4 collate utf8mb4_general_ci"
+mysql -u root -p -e "create database laravel character set utf8mb4 collate utf8mb4_general_ci"
 sudo chown -R www-data:www-data /var/www/html/proto/storage
 sudo chown -R www-data:www-data /var/www/html/proto/bootstrap/cache
