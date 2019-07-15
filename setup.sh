@@ -25,3 +25,5 @@ mysql -u root -p -e "create database laravel character set utf8mb4 collate utf8m
 sudo chown -R www-data:www-data /var/www/html/proto/storage
 sudo chown -R www-data:www-data /var/www/html/proto/bootstrap/cache
 php artisan migrate
+git config --global user.email "bhagwati@incogtech.com"
+git config --global user.name "oriophile"
