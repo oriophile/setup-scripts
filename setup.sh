@@ -18,8 +18,10 @@ sudo sed -i '/<\/VirtualHost>/i \\t<Directory \/var\/www\/html\/proto\/public>\n
 sudo a2ensite $confSite
 composer install
 php artisan key:generate
+sudo a2enmod rewrite
 sudo systemctl restart apache2
 sudo systemctl restart mysql
 mysql -u root -p -e "create database laravel character set utf8mb4 collate utf8mb4_general_ci"
 sudo chown -R www-data:www-data /var/www/html/proto/storage
 sudo chown -R www-data:www-data /var/www/html/proto/bootstrap/cache
+php artisan migrate
